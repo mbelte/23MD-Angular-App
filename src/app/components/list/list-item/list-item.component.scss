@@ -1,0 +1,22 @@
+.services__item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #df4d79;
+    color: #fff;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 30px 40px;
+    text-shadow: 2px 2px 2px #424242;
+    transition: 
+        background-color .2s,
+        box-shadow .3s;
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+}
+
+.services__item--selected {
+    background-color: #81b95f;
+}

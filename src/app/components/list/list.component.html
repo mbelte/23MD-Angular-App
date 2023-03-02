@@ -1,0 +1,22 @@
+<h1 class="header">
+    {{ listTitle }}
+</h1>
+<ul 
+    *ngIf="items?.length"
+    class="services"
+>
+    <app-list-item 
+        *ngFor="let item of items" 
+        [title]="item.title"
+        [price]="item.price"
+        [isSelected]="item.isSelected"
+        (click)="toggleSelect(item)"
+    ></app-list-item>
+    <app-list-footer [totalAmount]=totalAmount></app-list-footer>
+</ul>
+
+<div *ngIf="!items?.length">
+    <app-info-message 
+        message="There are no items to show."
+    ></app-info-message>
+</div>
